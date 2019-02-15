@@ -1,57 +1,58 @@
 body{
-    background:black;
-    color:white;
-  }
-  h1{
-    text-align:center;
-  }
-  #output{
-    font-size:30px;
-    width:200px;
-    
-    margin:auto;
-    border:0px solid red;
-  }
-  #score{
-    border:0px solid red;
-    display:inline-block;
-    position:relative;
-    left:450px;
-    font-size:20px;
-  }
-  #board{
-    
-    border:5px solid white;
-   display:inline-block;
-    height:400px;
-    width:400px;
-    margin:auto;
-     display:grid;
-    grid-template: 33.3% 33.3% 33.3%/33.3% 33.3% 33.3%;
-    
-  }
-  .r1c1{
-    border-right:3px solid white;
-    border-bottom:3px solid white;
-  }.r1c2{
-    border-right:3px solid white;
-    border-bottom:3px solid white;
-  }
-  #board button{
-    height:100%;
-    width:100%;
-   /* background-color:#fffdfb;*/
-    background-color:black;
-    font-size:70px;
+  background:black;
   color:white;
-  }
-  #resetButtons{
-    border:0px solid red;
-    width:50%;
-     margin-top:10px;
-    margin-left:530px;
-     
-  }
-  #resetButtons button{
-    font-size:15px;
-  }
+}
+h1{
+  text-align:center;
+}
+#output{
+  font-size:30px;
+  width:200px;
+  
+  margin:auto;
+  border:0px solid red;
+}
+#score{
+  border:0px solid red;
+ margin:10px auto ;
+  font-size:20px;
+  line-height:30px; 
+  width:100px
+    
+}
+#board{
+  
+  border:5px solid white;
+ display:inline-block;
+  height:400px;
+  width:400px;
+  margin:auto;
+   display:grid;
+  grid-template: 33.3% 33.3% 33.3%/33.3% 33.3% 33.3%;
+  
+}
+.r1c1{
+  border-right:3px solid white;
+  border-bottom:3px solid white;
+}.r1c2{
+  border-right:3px solid white;
+  border-bottom:3px solid white;
+}
+#board button{
+  height:100%;
+  width:100%;
+ /* background-color:#fffdfb;*/
+  background-color:black;
+  font-size:70px;
+color:white;
+}
+#resetButtons{
+  border:0px solid red;
+  width:50%;
+   margin-top:10px;
+  margin-left:530px;
+   
+}
+#resetButtons button{
+  font-size:15px;
+}
