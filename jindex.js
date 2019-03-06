@@ -1,3 +1,4 @@
+
 const buttons = document.querySelectorAll('#board');// board buttons
 var turn=2;
 var choice = prompt("Please enter a symbol X/O"); // uncomment
@@ -72,6 +73,11 @@ resetGame.addEventListener('click', (e) => {
   turn=2;
   picked=[[0,0,0],[0,0,0],[0,0,0]];
 document.getElementById('output').innerHTML="";  
+
+for(var i=1;i<=9;i++){
+document.getElementById('b'+i).disabled=false;
+  
+  }
 });
  function clear(){
    for(var i=1;i<=9;i++){ document.getElementById('b'+i).innerHTML="";
@@ -90,6 +96,11 @@ resetScore.addEventListener('click', (e) => {
   picked=[[0,0,0],[0,0,0],[0,0,0]];
 document.getElementById('output').innerHTML="";
 choice = prompt("Please enter a symbol X/O"); 
+for(var i=1;i<=9;i++){
+document.getElementById('b'+i).disabled=false;
+  
+  }
+
 });
 function winner(){
 if(p1check()==true ){
@@ -97,14 +108,21 @@ if(p1check()==true ){
   document.getElementById('output').innerHTML='Player 1 Wins!';
   count1++;
 document.getElementById('p1').innerHTML="Player 1: "+count1;
- 
+  for(var i=1;i<=9;i++){
+document.getElementById('b'+i).disabled=true;
+  
+  }
+
 }  
  else 
   if(p2check()==true){
           document.getElementById('output').innerHTML='Player 2 Wins!';
   count2++;
 document.getElementById('p2').innerHTML="Player 2: "+count2;
-         
+         for(var i=1;i<=9;i++){
+document.getElementById('b'+i).disabled=true;
+  
+  }
          }
   /**/
   else
@@ -112,7 +130,11 @@ document.getElementById('p2').innerHTML="Player 2: "+count2;
   {
            
             document.getElementById('output').innerHTML='Its a tie';
-         }
+  for(var i=1;i<=9;i++){
+document.getElementById('b'+i).disabled=true;
+  
+  }       
+  }
 
 
 }// winner function
@@ -172,3 +194,4 @@ function isEmpty(){
    return true; 
   }
   
+
